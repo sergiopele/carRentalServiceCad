@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import '../styles/VehicleList.css';
-import VehicleFilter from '../components/VehicleFilter';
+import VehicleFilter from './VehicleFilter';
 
 const VEHICLES = [
   {

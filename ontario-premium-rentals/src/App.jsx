@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import VehicleList from "./pages/VehicleList";
+import Vehicle from "./pages/Vehicle";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/vehicles" element={<VehicleList />} />
+        <Route path="/vehicles" element={<Vehicle />} />
       </Routes>
     </BrowserRouter>
   );
