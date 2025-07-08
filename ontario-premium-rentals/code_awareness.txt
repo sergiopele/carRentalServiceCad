@@ -1,4 +1,48 @@
-Grid Note for .hero-content:
-This grid is applied from all screen widths upward (non-mobile only). It defines a two-column layout: 1fr 1fr, keeping text and image side by side for consistent desktop and tablet layout.
-Mobile view fallback was removed due to layout issues.
+Hero Section Update (Dubai-style)
+Date: July 7, 2025
 
+Affected Files:
+- Hero.jsx
+- Hero.css
+
+Purpose:
+Redesigned the hero section to visually resemble the Dubai tourism website layout — featuring a full-screen background image, right-aligned overlay content with heading, description, and call-to-action button. The layout adapts responsively across desktop and mobile views.
+
+Key Changes:
+1. Background Image
+   - Moved hero image from <img> tag to CSS background on `.hero-section`.
+   - Ensures full-width, full-height coverage using `background: url(...) center center / cover no-repeat`.
+
+2. Layout Structure
+   - Changed `.hero-section` to use `display: flex; justify-content: flex-end` for desktop layout.
+   - Positioned `.hero-overlay` to the right and vertically centered.
+   - On mobile, content is centered using media queries.
+
+3. Overlay Content Box
+   - New `.hero-overlay` class introduced to wrap content.
+   - Uses `background: rgba(255, 255, 255, 0.25)` and `backdrop-filter: blur(10px)` for glassmorphism.
+   - Includes padding, max-width, and border-radius for aesthetic layout.
+
+4. Typography
+   - Updated heading (`h1`) and paragraph (`p`) styling for better visibility and spacing.
+   - Applied modern font settings and line height for improved readability.
+
+5. CTA Button
+   - Converted to white background, black text style with hover transition.
+   - Ensured responsive alignment: left-aligned on desktop, centered on mobile.
+
+6. Mobile Responsiveness
+   - On screens <768px:
+     - `.hero-section` layout changes to center content.
+     - `.hero-overlay` becomes full width with increased padding.
+     - Typography scales down for small screens.
+     - Image remains full-screen background.
+
+Implementation Notes:
+- To change the hero background image, update the CSS line in `.hero-section`:
+  background: url('/your-image.png') center center / cover no-repeat;
+
+- You may further tweak the blur strength or overlay background opacity depending on image clarity.
+
+Result:
+A visually appealing and responsive hero section that mirrors a modern landing page aesthetic with strong visual impact on both desktop and mobile.
