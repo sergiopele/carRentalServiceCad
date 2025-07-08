@@ -1,0 +1,59 @@
+.vehicle-filter {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  background: #ffffff;
+
+  /* ✨ New line to match horizontal spacing */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+.filter-label {
+  font-size: 1.125rem;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.sort-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  color: #1f2937;
+  appearance: none;
+  cursor: pointer;
+}
+
+.dropdown-toggle:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+/* Add an arrow using CSS */
+.dropdown-toggle {
+  background-image:
+    linear-gradient(45deg, transparent 50%, #1f2937 50%),
+    linear-gradient(135deg, #1f2937 50%, transparent 50%);
+  background-position:
+    calc(100% - 1rem) calc(50% + 2px),
+    calc(100% - 0.75rem) calc(50% + 2px);
+  background-size: 0.5rem 0.5rem;
+  background-repeat: no-repeat;
+}
+.vehicles-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}

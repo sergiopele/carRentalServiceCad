@@ -1,25 +1,71 @@
-/* src/styles/VehicleList.css */
 
 .vehicle-list-page {
-  min-height: 100vh;
-  padding: 4rem 2rem;
-  font-family: 'Inter', sans-serif;
-  background-color: #f9fafb;
-}
-
-.vehicle-list-container {
+ padding: 5rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.vehicle-list-header {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
-.vehicle-list-container h1 {
+.vehicle-list-header h1 {
   font-size: 2.5rem;
-  color: #111827;
-  margin-bottom: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
-.vehicle-list-container p {
-  color: #6b7280;
+.vehicle-list-header p {
   font-size: 1.125rem;
+  color: #4b5563;
+}
+
+.vehicle-list-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 0 1rem; /* ← ADD THIS LINE */
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .vehicle-list-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .vehicle-list-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.vehicle-list-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.vehicle-list-image-placeholder {
+  background: #f0f0f0;
+  height: 180px;
+}
+
+.vehicle-list-details {
+  padding: 1rem;
+}
+
+.vehicle-list-details h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.vehicle-list-details p {
+  color: #6b7280;
+  font-size: 0.95rem;
 }

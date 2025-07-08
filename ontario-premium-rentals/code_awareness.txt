@@ -46,3 +46,104 @@ Implementation Notes:
 
 Result:
 A visually appealing and responsive hero section that mirrors a modern landing page aesthetic with strong visual impact on both desktop and mobile.
+
+-------------------------------------------------------------------------------------
+✅ CODE AWARENESS LOG – VEHICLE PAGE & ROUTING INTEGRATION
+
+📁 PROJECT RESTRUCTURE:
+- Created a new `pages/` directory under `src/`
+- Added a new page file:
+  - src/pages/VehicleList.jsx
+
+🆕 VEHICLE LIST PAGE (EMPTY STRUCTURE):
+File: src/pages/VehicleList.jsx
+-----------------------------------------------------
+export default function VehicleList() {
+  return (
+    <div style={{ padding: '4rem 2rem', textAlign: 'center' }}>
+      <h1>All Vehicles</h1>
+      <p>Browse the complete fleet of premium cars available for rent in Ontario.</p>
+    </div>
+  );
+}
+-----------------------------------------------------
+
+🔧 ROUTER SETUP:
+- Installed React Router:
+  npm install react-router-dom
+
+🗂 main.jsx MODIFICATION:
+-----------------------------------------------------
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App.jsx";
+import "./index.css";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
+-----------------------------------------------------
+
+🛠 App.jsx UPDATED FOR ROUTING:
+-----------------------------------------------------
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import VehicleList from "./pages/VehicleList";
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/vehicles" element={<VehicleList />} />
+    </Routes>
+  );
+}
+
+export default App;
+-----------------------------------------------------
+
+💡 BUTTON ROUTING UPDATES:
+1. Updated Hero section button:
+  - Replaced `<a href="#vehicles">` with `<Link to="/vehicles">`
+
+2. Updated "View All Vehicles" button in FeaturedVehicles.jsx:
+  - Replaced `<button>` with `<Link to="/vehicles">View All Vehicles</Link>`
+
+3. Updated Footer quick link to "Vehicles":
+  - Replaced `<a href="#vehicles">` with `<Link to="/vehicles">`
+
+🔁 COMPONENTS MODIFIED FOR ROUTING:
+- Hero.jsx
+- FeaturedVehicles.jsx
+- Footer.jsx
+(all now import and use `Link` from `react-router-dom`)
+
+🧩 1. VehicleList.jsx
+	•	Created a new page (VehicleList.jsx) representing a full list of available vehicles.
+	•	Integrated mock vehicle data with name, image, description, and price.
+	•	Implemented a filter system using state (sortBy) and useMemo() for derived sorting.
+	•	Displayed vehicle cards in a responsive grid (1 column mobile, 2 tablet, 3 desktop).
+	•	Styled to visually align with the Featured Vehicles section from homepage.
+
+        🧩 2. VehicleFilter.jsx
+	•	Developed a standalone component that renders a <select> dropdown.
+	•	Passed sorting options: Name (A–Z / Z–A), Price (Low–High / High–Low).
+	•	Built as a controlled input with accessibility enhancements (screen-reader label).
+	•	onSortChange() prop used to notify parent component of sort selection.
+        🎨 3. Styling (.css)
+	•	VehicleList.css:
+	•	Updated spacing and padding to match homepage vehicle layout.
+	•	Refined grid layout with consistent gap and responsive breakpoints.
+	•	Ensured .vehicles-container has equal left/right padding across viewports.
+	•	VehicleFilter.css:
+	•	Styled the filter panel with subtle borders and padding.
+	•	Matched horizontal spacing with .vehicles-container by adding padding-left/right.
+	•	Applied dropdown arrow using background gradients for a clean design.
+	•	Ensured visual clarity and clickability of the dropdown.
+        🧪 4. Result
+	•	Final layout is responsive, aligned with design patterns used in homepage sections.
+	•	Filter and sorting interaction works without errors or infinite loading.
+	•	Component structure remains modular and clean for future enhancements.
