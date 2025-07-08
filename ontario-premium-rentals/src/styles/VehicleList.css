@@ -1,0 +1,25 @@
+/* src/styles/VehicleList.css */
+
+.vehicle-list-page {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+}
+
+.vehicle-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.vehicle-list-container h1 {
+  font-size: 2.5rem;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.vehicle-list-container p {
+  color: #6b7280;
+  font-size: 1.125rem;
+}

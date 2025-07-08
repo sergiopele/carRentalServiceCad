@@ -1,7 +1,14 @@
+import { useNavigate } from 'react-router-dom';
 import '../styles/FeaturedVehicles.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export default function FeaturedVehicles() {
+  const navigate = useNavigate();
+
+  const handleViewAllClick = () => {
+    navigate('/vehicles');
+  };
+
   return (
     <section className="featured-vehicles-section" id="vehicles">
       <div className="vehicles-container">
@@ -33,7 +40,9 @@ export default function FeaturedVehicles() {
           />
         </div>
         <div className="vehicles-footer">
-          <button className="view-all-button">View All Vehicles</button>
+          <button className="view-all-button" onClick={handleViewAllClick}>
+            View All Vehicles
+          </button>
         </div>
       </div>
     </section>
