@@ -1,0 +1,4 @@
+Grid Note for .hero-content:
+This grid is applied from all screen widths upward (non-mobile only). It defines a two-column layout: 1fr 1fr, keeping text and image side by side for consistent desktop and tablet layout.
+Mobile view fallback was removed due to layout issues.
+
