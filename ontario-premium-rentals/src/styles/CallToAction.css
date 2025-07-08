@@ -1,0 +1,41 @@
+.cta-section {
+  background-color: #2563eb;
+  color: white;
+  padding: 5rem 1rem;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.cta-container {
+  max-width: 1200px;
+margin: 0 auto;
+padding: 0 1rem; /* or 1.5rem */
+}
+
+.cta-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta-container p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-button {
+  background-color: white;
+  color: #2563eb;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  background-color: #e0e7ff;
+}

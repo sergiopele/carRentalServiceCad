@@ -1,0 +1,55 @@
+.why-us-section {
+  background-color: #f9fafb;
+  padding: 5rem 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.why-us-container {
+  max-width: 1200px;
+margin: 0 auto;
+padding: 0 1rem; /* or 1.5rem */
+}
+
+.why-us-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .why-us-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.why-us-card {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.why-us-card:hover {
+  transform: scale(1.03);
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #dbeafe;
+  color: #2563eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1.5rem;
+}

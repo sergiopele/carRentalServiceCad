@@ -1,0 +1,132 @@
+.featured-vehicles-section {
+  padding: 5rem 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.vehicles-container {
+  max-width: 1200px;
+margin: 0 auto;
+padding: 0 1rem; /* or 1.5rem */
+}
+
+.vehicles-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.vehicles-subtitle {
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.vehicle-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .vehicle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .vehicle-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.vehicle-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.vehicle-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.vehicle-details {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.vehicle-details h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.vehicle-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: #fbbf24;
+}
+
+.stars i {
+  margin-right: 2px;
+}
+
+.vehicle-pricing {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.vehicle-pricing .price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0.25rem;
+}
+
+.book-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  border: none;
+  transition: background 0.3s;
+}
+
+.book-button:hover {
+  background-color: #1d4ed8;
+}
+
+.vehicles-footer {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.view-all-button {
+  border: 2px solid #2563eb;
+  background: transparent;
+  color: #2563eb;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.view-all-button:hover {
+  background: #2563eb;
+  color: white;
+}
